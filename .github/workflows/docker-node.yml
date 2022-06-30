@@ -4,7 +4,7 @@ on:
   push:
     branches: [ "main" ]
   pull_request:
-    branches: [ "main" ]
+    branches: '*'
 
 jobs:
 
@@ -14,5 +14,24 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+    
+    - uses: actions/setup-node@v3
+      with: 
+          node-version: 16.x
+    - run: npm install -g semantic-release @semantic-release/exec semantic-release-plus @semantic-release-plus/docker
+    - run: semantic-release
+             
+    - name: Login to DockerHub
+      uses: docker/login-action@v2
+      with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      
+    - uses: mr-smithers-excellent/docker-build-push@v5
+      name: Build & push Docker image
+      with:
+          image: ctrlpy/node-server
+          registry: docker.io
+         
+     
