@@ -18,7 +18,7 @@ jobs:
     - uses: actions/setup-node@v3
       with: 
           node-version: 16.x
-    - run: npm ci
+    - run: npm install -g semantic-release @semantic-release/exec semantic-release-plus @semantic-release-plus/docker
     - run: npm run semantic-release
              
     - name: Login to DockerHub
