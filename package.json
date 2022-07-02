@@ -1,22 +1,20 @@
 {
-  "name": "docker_web_app",
-  "version": "0.0.0-development",
-  "description": "Node.js on Docker",
-  "author": "First Last <first.last@example.com>",
-  "main": "server.js",
+  "name": "semantic",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".releaserc.js",
   "scripts": {
-    "start": "node server.js",
-    "semantic-release": "semantic-release --branches main"
-  },
-  "dependencies": {
-    "express": "^4.16.1",
-    "semantic-release-cli": "^5.4.4"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/CtrlPy/devops-be.git"
+    "url": "git+https://github.com/CtrlPy/devops-be.git"
   },
-  "devDependencies": {
-    "semantic-release": "^19.0.3"
-  }
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CtrlPy/devops-be/issues"
+  },
+  "homepage": "https://github.com/CtrlPy/devops-be#readme"
 }
