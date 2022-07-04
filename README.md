@@ -1,1 +1,1 @@
-# devops-be semantic release
+# devops-be
