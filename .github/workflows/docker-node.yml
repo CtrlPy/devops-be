@@ -21,7 +21,7 @@ jobs:
     - run: npm install -g semantic-release @semantic-release/exec semantic-release-plus @semantic-release-plus/docker
     - run: npm run semantic-release
 
-        env:
+    env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         DOCKER_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
         DOCKER_PASSWORD: ${{ secrets.DOCKERHUB_TOKEN }}
