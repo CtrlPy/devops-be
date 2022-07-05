@@ -25,4 +25,4 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         DOCKER_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
         DOCKER_PASSWORD: ${{ secrets.DOCKERHUB_TOKEN }}
-        DOCKER_REPOSITORY_NAME: node-server
+        DOCKER_REPOSITORY_NAME: ctrlpy/node-server
