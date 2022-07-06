@@ -8,10 +8,6 @@ on:
       - beta
       - "*.x"
 
-env:
-  DOCKER_USERNAME: ctrlpy
-  DOCKER_REPOSITORY_NAME: node-server
-
 jobs:
 
 
@@ -27,5 +23,6 @@ jobs:
       - run: semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          DOCKER_USERNAME: ${{ env.DOCKER_USERNAME }}
+          DOCKER_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKERHUB_TOKEN }}
+          DOCKER_REPOSITORY_NAME: ctrlpy/node-server
