@@ -6,7 +6,7 @@ name: Docker Image CI
       - main
 env:
     DOCKER_USERNAME: ctrlpy
-    DOCKER_REPOSITORY_NAME: ctrlpy/node-server
+    DOCKER_REPOSITORY_NAME: node-server
 jobs:
   build:
     runs-on: ubuntu-latest
