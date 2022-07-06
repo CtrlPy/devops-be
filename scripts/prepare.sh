@@ -1,2 +1,2 @@
 
-docker build -t "$1" .
+docker build -t "$DOCKER_USERNAME/$DOCKER_REPOSITORY_NAME" .
