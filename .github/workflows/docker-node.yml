@@ -4,9 +4,9 @@ name: Docker Image CI
   push:
     branches:
       - main
-    env:
-      DOCKER_USERNAME: ctrlpy
-      DOCKER_REPOSITORY_NAME: ctrlpy/node-server
+env:
+    DOCKER_USERNAME: ctrlpy
+    DOCKER_REPOSITORY_NAME: ctrlpy/node-server
 jobs:
   build:
     runs-on: ubuntu-latest
