@@ -1,4 +1,4 @@
-
+/*
 module.exports = {
     "branches": ["main", "next"],
     "plugins": [
@@ -27,3 +27,4 @@ module.exports = {
     ]
 }
 
+*/
