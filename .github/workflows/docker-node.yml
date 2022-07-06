@@ -7,6 +7,10 @@ on:
       - next
       - beta
       - "*.x"
+env:
+  DOCKER_USERNAME: ctrlpy
+  DOCKER_REPOSITORY_NAME: node-server
+
 
 jobs:
 
@@ -20,9 +24,9 @@ jobs:
         with:
           node-version: 16.x
       - run: npm install -g semantic-release @semantic-release/exec semantic-release-plus @semantic-release-plus/docker
-      - run: run semantic-release
+      - run: semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          DOCKER_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-          DOCKER_REPOSITORY_NAME: node-server
+          
